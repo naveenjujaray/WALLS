@@ -155,6 +155,34 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "5.1.0"
+  firebase:
+    dependency: transitive
+    description:
+      name: firebase
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "7.3.0"
+  firebase_core:
+    dependency: "direct main"
+    description:
+      name: firebase_core
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.4.4+3"
+  firebase_core_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_core_platform_interface
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.4"
+  firebase_core_web:
+    dependency: transitive
+    description:
+      name: firebase_core_web
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.1+2"
   flare_dart:
     dependency: transitive
     description:
