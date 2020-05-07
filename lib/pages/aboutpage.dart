@@ -61,7 +61,7 @@ class AboutPage extends StatelessWidget with NavigationStates{
                           color: Colors.grey.shade200,
                       ),
                       child: Text("These images are gathered from Pexels, Walls was developed using Flutter in Android Studio. "
-                      "Source code will be updated soon in Github.",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18),),
+                      "Source code are available in Github.",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18),),
                     ),
                   ],
                 ),
