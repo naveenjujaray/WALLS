@@ -19,7 +19,6 @@ class ImageView extends StatefulWidget {
 
 class _ImageViewState extends State<ImageView> {
   var imgPath;
-  static const platform = const MethodChannel('commons/image_view.dart');
 
   @override
   Widget build(BuildContext context) {
