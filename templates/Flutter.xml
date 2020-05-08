@@ -1,6 +1,6 @@
 <templateSet group="Flutter">
-  <template name="build" value="@override &#10; Widget build(BuildContext context) { &#10; return $body$; &#10;}&#10;" description="No Such Method" toReformat="true" toShortenFQNames="true">
-    <variable name="body" expression="$body$" defaultValue="" alwaysStopAt="true" />
+  <template name="mateApp" value="import 'package:flutter/material.dart';&#10; &#10;void main() =&gt; runApp($className$());&#10; &#10;class $className$ extends StatelessWidget {&#10;  @override&#10;  Widget build(BuildContext context) {&#10;    return MaterialApp(&#10;      title: 'Material App',&#10;      home: Scaffold(&#10;        appBar: AppBar(&#10;          title: Text('Material App Bar'),&#10;        ),&#10;        body: Center(&#10;          child: Container(&#10;            child: Text('Hello World'),&#10;          ),&#10;        ),&#10;      ),&#10;    );&#10;  }&#10;}" description="Create a New Material App" toReformat="true" toShortenFQNames="true">
+    <variable name="className" expression="&quot;MyApp&quot;" defaultValue="" alwaysStopAt="true" />
     <context />
   </template>
 </templateSet>
