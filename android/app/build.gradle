@@ -47,9 +47,11 @@ android {
 
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.debug
+            minifyEnabled true
+        }
+        debug{
+            minifyEnabled true
         }
     }
 }
@@ -67,7 +69,7 @@ apply plugin: 'com.google.gms.google-services'
 
 dependencies {
     // add the Firebase SDK for Google Analytics
-    implementation 'com.google.firebase:firebase-analytics:17.4.0'
+    implementation 'com.google.firebase:firebase-analytics:17.2.2'
     // add SDKs for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
 }

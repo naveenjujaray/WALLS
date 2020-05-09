@@ -1,3 +1,4 @@
+import 'package:Walls/bloc/navigation_bloc/dashboard_navigation.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:Walls/bloc/navigation_bloc/navigation_bloc.dart';
 import 'package:Walls/commons/my_info.dart';
@@ -9,7 +10,7 @@ import 'package:Walls/styleguide/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-class AboutPage extends StatelessWidget with NavigationStates{
+class AboutPage extends StatelessWidget with NavigationStates,DashboardStates{
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;

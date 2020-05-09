@@ -60,9 +60,10 @@ class _SearchState extends State<Search> {
           child: Column(
             children: <Widget>[
               Container(
+
                 decoration: BoxDecoration(
-                    color: Color(0xfff5f8fd),
-                    borderRadius: BorderRadius.circular(30)
+                  color: Color(0xfff5f8fd).withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(30),
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 margin: EdgeInsets.symmetric(horizontal: 40),
@@ -70,19 +71,23 @@ class _SearchState extends State<Search> {
                   children: <Widget>[
                     Expanded(
                       child: TextField(
+
                         controller: searchController,
                         decoration: InputDecoration(
-                          hintText: "Search Walls",
+                          hintStyle: TextStyle(color: Colors.white),
+                          hintText: ("Search Walls"),
                           border: InputBorder.none,
                         ),
+                        style: (TextStyle(color: Colors.white)),
                       ),
+
                     ),
                     GestureDetector(
                       onTap: (){
                         getSearchWallpapers(searchController.text);
                       },
                       child: Container(
-                          child: Icon(Icons.search)),
+                          child: Icon(Icons.search,color: Colors.white,)),
                     )
                   ],
                 ),

@@ -92,6 +92,27 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.1"
+  cloud_firestore:
+    dependency: "direct main"
+    description:
+      name: cloud_firestore
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.13.5"
+  cloud_firestore_platform_interface:
+    dependency: transitive
+    description:
+      name: cloud_firestore_platform_interface
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.1.0"
+  cloud_firestore_web:
+    dependency: transitive
+    description:
+      name: cloud_firestore_web
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.1+2"
   codemod:
     dependency: transitive
     description:
@@ -148,6 +169,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "3.0.9"
+  email_validator:
+    dependency: "direct main"
+    description:
+      name: email_validator
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.4"
   file:
     dependency: transitive
     description:
@@ -162,6 +190,27 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "7.3.0"
+  firebase_auth:
+    dependency: "direct main"
+    description:
+      name: firebase_auth
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.16.0"
+  firebase_auth_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_auth_platform_interface
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.1.7"
+  firebase_auth_web:
+    dependency: transitive
+    description:
+      name: firebase_auth_web
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.2"
   firebase_core:
     dependency: "direct main"
     description:
@@ -183,6 +232,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.1.1+2"
+  firebase_database:
+    dependency: "direct main"
+    description:
+      name: firebase_database
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.1.5"
   flare_dart:
     dependency: transitive
     description:
@@ -393,7 +449,7 @@ packages:
       name: node_io
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.0.1+2"
+    version: "1.1.0"
   package_config:
     dependency: transitive
     description:
@@ -630,6 +686,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.2.15"
+  timeago:
+    dependency: "direct main"
+    description:
+      name: timeago
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.0.26"
   transformer_page_view:
     dependency: transitive
     description:

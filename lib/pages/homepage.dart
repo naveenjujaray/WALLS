@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:Walls/bloc/navigation_bloc/dashboard_navigation.dart';
 import 'package:Walls/commons/category_model.dart';
 import 'package:Walls/commons/data.dart';
 import 'package:Walls/commons/image_view.dart';
@@ -11,7 +12,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:http/http.dart' as http;
 import 'package:Walls/pages/search.dart';
 import 'package:Walls/pages/category.dart';
-class HomePage extends StatefulWidget with NavigationStates {
+class HomePage extends StatefulWidget with NavigationStates,DashboardStates {
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -64,7 +65,7 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               Container(
                 decoration: BoxDecoration(
-                  color: Color(0xfff5f8fd),
+                  color: Color(0xfff5f8fd).withOpacity(0.2),
                   borderRadius: BorderRadius.circular(30)
                 ),
                 padding: EdgeInsets.symmetric(horizontal: 20),
@@ -75,9 +76,11 @@ class _HomePageState extends State<HomePage> {
                       child: TextField(
                         controller: searchController,
                         decoration: InputDecoration(
+                          hintStyle: TextStyle(color: Colors.white),
                           hintText: "Search Walls",
                           border: InputBorder.none,
                         ),
+                        style: (TextStyle(color: Colors.white)),
                       ),
                     ),
                     GestureDetector(
@@ -90,7 +93,7 @@ class _HomePageState extends State<HomePage> {
 
                       },
                       child: Container(
-                          child: Icon(Icons.search)),
+                          child: Icon(Icons.search,color: Colors.white,)),
                     )
                   ],
                 ),
