@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:Walls/blog/services/usermanagement.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:rxdart/rxdart.dart';
 import 'dart:async';
@@ -102,7 +103,7 @@ void onIconPressed() {
                       title: "Home",
                       onTap: () {
                         onIconPressed();
-                        BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.HomePageCickedEvent);
+                        BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.HomePageClickedEvent);
                       },
                     ), //home
                    // MenuItem(
@@ -114,6 +115,22 @@ void onIconPressed() {
                       // },
                     // ),//Settings
                     MenuItem(
+                      icon: Icons.library_books,
+                      title: "Blog",
+                      onTap: () {
+                        onIconPressed();
+                        BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.BlogPageClickedEvent);
+                      },
+                    ),//About Me
+                    MenuItem(
+                      icon: Icons.vpn_key,
+                      title: "Login",
+                      onTap: () {
+                        onIconPressed();
+                        BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.LoginPageClickedEvent);
+                      },
+                    ),//About Me
+                    MenuItem(
                       icon: Icons.person,
                       title: "About Me",
                       onTap: () {
@@ -121,6 +138,8 @@ void onIconPressed() {
                         BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.AboutPageClickedEvent);
                       },
                     ),//About Me
+
+
                   ],
                 ),
 

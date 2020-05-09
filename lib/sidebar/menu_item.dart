@@ -1,6 +1,8 @@
+import 'package:Walls/bloc/navigation_bloc/dashboard_navigation.dart';
+import 'package:Walls/bloc/navigation_bloc/navigation_bloc.dart';
 import 'package:flutter/material.dart';
 
-class MenuItem extends StatelessWidget {
+class MenuItem extends StatelessWidget with DashboardStates,NavigationStates{
   final IconData icon;
   final String title;
   final onTap;
