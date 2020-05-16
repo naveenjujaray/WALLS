@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "478755410693",
+    "firebase_url": "https://walls-a99c3.firebaseio.com",
+    "project_id": "walls-a99c3",
+    "storage_bucket": "walls-a99c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478755410693:android:add0539d8851015456dd6c",
+        "android_client_info": {
+          "package_name": "com.naveenjujaray.walls"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "478755410693-dnaf22lgk6in4i9nv63vns6gfq698h1s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.naveenjujaray.walls",
+            "certificate_hash": "cc0b4e0645f2ca0d75b474b95b2d900bbbddc95e"
+          }
+        },
+        {
+          "client_id": "478755410693-s5h1bq5m2kiq8ttd5a5sohdpdsqj88q4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtJfq8Bm96icAS6JasnNIcTALcXkzLYqw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "478755410693-s5h1bq5m2kiq8ttd5a5sohdpdsqj88q4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
