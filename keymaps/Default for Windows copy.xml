@@ -1,0 +1,3 @@
+<keymap version="1" name="Default for Windows copy" parent="$default">
+  <action id="EditorToggleInsertState" />
+</keymap>
