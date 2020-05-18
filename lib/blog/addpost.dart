@@ -28,6 +28,7 @@ class _AddPostState extends State<AddPost> {
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
                   cursorColor: Colors.green,
+                  style: (TextStyle(color: Colors.white)),
                   decoration: InputDecoration(
                       labelText: "Feedback",
                       labelStyle: TextStyle(color: Colors.blueAccent,fontSize: 25),
@@ -63,6 +64,7 @@ class _AddPostState extends State<AddPost> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  style: (TextStyle(color: Colors.white)),
                   cursorColor: Colors.green,
                   decoration: InputDecoration(
                       labelText: "Describe your experience",
