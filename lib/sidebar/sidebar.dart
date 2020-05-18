@@ -116,20 +116,20 @@ void onIconPressed() {
                     // ),//Settings
                     MenuItem(
                       icon: Icons.library_books,
-                      title: "Blog",
+                      title: "Feedback",
                       onTap: () {
                         onIconPressed();
                         BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.BlogPageClickedEvent);
                       },
                     ),//About Me
-                    MenuItem(
-                      icon: Icons.vpn_key,
-                      title: "Login",
-                      onTap: () {
-                        onIconPressed();
-                        BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.LoginPageClickedEvent);
-                      },
-                    ),//About Me
+                   // MenuItem(
+                     // icon: Icons.vpn_key,
+                      //title: "Login",
+                      //onTap: () {
+                        //onIconPressed();
+                        //BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.LoginPageClickedEvent);
+                      //},
+                    //),//About Me
                     MenuItem(
                       icon: Icons.person,
                       title: "About Me",
