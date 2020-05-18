@@ -60,6 +60,7 @@ class _BlogPageState extends State<BlogPage> {
                         return Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Card(
+                            color: Colors.black,
                             child: ListTile(
                               title: ListTile(
                                 onTap: (){
@@ -68,7 +69,7 @@ class _BlogPageState extends State<BlogPage> {
                                 title: Text(
                                   postsList[index].title,
                                   style: TextStyle(
-                                      fontSize: 22.0, fontWeight: FontWeight.bold),
+                                      color: Colors.white,fontSize: 22.0, fontWeight: FontWeight.bold),
                                 ),
                                 trailing: Text(
                                   timeago.format(DateTime.fromMillisecondsSinceEpoch(postsList[index].date)),
@@ -77,7 +78,7 @@ class _BlogPageState extends State<BlogPage> {
                               ),
                               subtitle: Padding(
                                 padding: const EdgeInsets.only(bottom: 14.0),
-                                child: Text(postsList[index].body, style: TextStyle(fontSize: 18.0),),
+                                child: Text(postsList[index].body, style: TextStyle(color: Colors.white,fontSize: 18.0),),
                               ),
                             ),
                           ),
@@ -96,7 +97,7 @@ class _BlogPageState extends State<BlogPage> {
           Icons.edit,
           color: Colors.white,
         ),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.blueAccent,
         tooltip: "add a post",
       ),
     );

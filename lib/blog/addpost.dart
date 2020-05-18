@@ -15,8 +15,9 @@ class _AddPostState extends State<AddPost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black87,
       appBar: AppBar(
-        title: Text("add post"),
+        title: Text("Add Feedback"),
         elevation: 0.0,
       ),
       body: Form(
@@ -26,16 +27,34 @@ class _AddPostState extends State<AddPost> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  cursorColor: Colors.green,
                   decoration: InputDecoration(
-                      labelText: "Post tilte",
-                      border: OutlineInputBorder()
+                      labelText: "Feedback",
+                      labelStyle: TextStyle(color: Colors.blueAccent,fontSize: 25),
+                      hintText: 'Title',
+                      hintStyle: TextStyle(color: Colors.white),
+                    fillColor: Colors.white.withOpacity(0.2),
+                    filled: true,
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: const BorderRadius.all(
+                            const Radius.circular(20),
+                          ),
+                          borderSide: BorderSide(
+                          color: Colors.lightBlueAccent
+                      )),
+                    border: OutlineInputBorder(
+                        borderRadius: const BorderRadius.all(
+                          const Radius.circular(20),
+                        ),
+                        borderSide: BorderSide()
+                    ),
                   ),
                   onSaved: (val) => post.title = val,
                   // ignore: missing_return
                   validator: (val){
                     if(val.isEmpty ){
                       return "title field cant be empty";
-                    }else if(val.length > 16){
+                    }else if(val.length > 40){
                       return "title cannot have more than 16 characters ";
                     }
                   },
@@ -44,10 +63,29 @@ class _AddPostState extends State<AddPost> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  cursorColor: Colors.green,
                   decoration: InputDecoration(
-                      labelText: "Post body",
-                      border: OutlineInputBorder()
+                      labelText: "Describe your experience",
+                      labelStyle: TextStyle(color: Colors.blueAccent,fontSize: 25),
+                      hintText: 'Description',
+                      hintStyle: TextStyle(color: Colors.white),
+                    fillColor: Colors.white.withOpacity(0.2),
+                    filled: true,
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: const BorderRadius.all(
+                            const Radius.circular(20),
+                          ),
+                        borderSide: BorderSide(
+                          color: Colors.lightBlueAccent
+                        )),
+                      border: OutlineInputBorder(
+                          borderRadius: const BorderRadius.all(
+                            const Radius.circular(20),
+                          ),
+                      borderSide: BorderSide()
+                ),
                   ),
+
                   onSaved: (val) => post.body = val,
                   // ignore: missing_return
                   validator: (val){
@@ -64,8 +102,8 @@ class _AddPostState extends State<AddPost> {
         Navigator.pop(context);
 //        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
       },
-        child: Icon(Icons.add, color: Colors.white,),
-        backgroundColor: Colors.red,
+        child: Icon(Icons.check, color: Colors.white,),
+        backgroundColor: Colors.green,
         tooltip: "add a post",),
     );
   }

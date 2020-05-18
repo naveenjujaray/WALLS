@@ -18,6 +18,7 @@ class _PostViewState extends State<PostView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black87,
       appBar: AppBar(
         title: Text(widget.post.title),
       ),
@@ -33,23 +34,23 @@ class _PostViewState extends State<PostView> {
                     style: TextStyle(fontSize: 14.0, color: Colors.grey),
                   ),
                 ),),
-              IconButton(icon: Icon(Icons.delete),
-                onPressed: (){
-                  PostService postService = PostService(widget.post.toMap());
-                  postService.deletePost();
-                  Navigator.pop(context);
+              //IconButton(icon: Icon(Icons.delete),
+                //onPressed: (){
+                  //PostService postService = PostService(widget.post.toMap());
+                  //postService.deletePost();
+                  //Navigator.pop(context);
 
-                },),
-              IconButton(icon: Icon(Icons.edit),
-                onPressed: (){
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => EditPost(widget.post)));
-                },),
+               // },),
+              //IconButton(icon: Icon(Icons.edit),
+                //onPressed: (){
+                  //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => EditPost(widget.post)));
+                //},),
             ],
           ),
           Divider(),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(widget.post.body),
+            child: Text(widget.post.body,style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),),
           ),
         ],
       ),

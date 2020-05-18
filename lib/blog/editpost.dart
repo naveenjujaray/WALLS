@@ -70,7 +70,7 @@ class _EditPostState extends State<EditPost> {
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
       },
         child: Icon(Icons.edit, color: Colors.white,),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.blueAccent,
         tooltip: "exit a post",),
     );
   }
