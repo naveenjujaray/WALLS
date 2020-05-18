@@ -29,6 +29,7 @@ class _SearchState extends State<Search> {
     //print(response.body.toString());
 
     Map<String,dynamic> jsonData = jsonDecode(response.body);
+    wallpapers = new List();
     jsonData["photos"].forEach((element){
       //print(element);
       WallpaperModel wallpaperModel = new WallpaperModel();
