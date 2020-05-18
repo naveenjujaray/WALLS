@@ -153,6 +153,7 @@ class _ImageViewState extends State<ImageView> {
   }
   _modal(){
       showModalBottomSheet(
+
         backgroundColor: Colors.white.withOpacity(0.2),
           elevation: 0,
           shape: RoundedRectangleBorder(
@@ -160,9 +161,9 @@ class _ImageViewState extends State<ImageView> {
           context: context,
           builder: (BuildContext context){
             return Container(
-
+              height: 130,
                 decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.2),
+                    color: Colors.black.withOpacity(0.8),
                 borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(30),
             topRight: Radius.circular(30),
@@ -174,8 +175,8 @@ class _ImageViewState extends State<ImageView> {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   _createTile(context, 'Home Screen', Icons.home, _action1),
+                  SizedBox(height: 10,),
                   _createTile(context, 'Lock Screen', Icons.lock, _action2),
-                  _createTile(context, 'Both Screens', Icons.phone_android, _action3),
                 ],
               ),
             );
@@ -187,7 +188,7 @@ class _ImageViewState extends State<ImageView> {
       leading: Icon(icon,
       color: Colors.blueAccent,),
       title: Text(name,
-      style: TextStyle(color: Colors.white),),
+      style: TextStyle(color: Colors.white,fontWeight: FontWeight.w500,fontSize: 20),),
       onTap: (){
         Navigator.pop(context);
         action();
@@ -219,17 +220,6 @@ class _ImageViewState extends State<ImageView> {
 
   }
 
-  _action3() async{
-    if (Platform.isAndroid) {
-      await _askPermission();
-    }
-    var response = await Dio()
-        .get(widget.imgUrl, options: Options(responseType: ResponseType.bytes));
-    home = await Wallpaper.bothScreen(widget.imgUrl);
-    final result =  home= system;
-    print(result);
-
-    }
 
   }
 
