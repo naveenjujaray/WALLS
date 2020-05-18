@@ -34,10 +34,10 @@ dependencies:
   intro_views_flutter: ^2.8.1
   wave: ^0.0.8
   font_awesome_flutter: ^8.8.1
-  url_launcher: ^5.4.5
-  url_launcher_web: ^0.1.1+4
+  url_launcher: ^5.4.7
+  url_launcher_web: ^0.1.1+5
   dio: ^3.0.9
-  shared_preferences: ^0.5.7+1
+  shared_preferences: ^0.5.7+2
   random_string: ^2.0.1
   image_picker_saver: ^0.3.0
   permission: ^0.1.7
@@ -45,14 +45,15 @@ dependencies:
   bottomreveal: ^1.0.0
   charts_flutter: ^0.9.0
   animated_floatactionbuttons: ^0.1.0
-  share: ^0.6.4+1
+  share: ^0.6.4+2
   intl: ^0.16.1
   flare_flutter: ^2.0.3
-  rxdart: ^0.24.0
+  rxdart: ^0.24.1
   rxdart_codemod: ^0.1.5
   flutter_bloc : ^4.0.0
   cached_network_image: ^2.2.0+1
-  package_info: ^0.4.0+17
+  wallpaper:
+  package_info: ^0.4.0+18
   flutter_staggered_grid_view: ^0.3.0
   crop: ^0.3.1+1
   http: ^0.12.1
@@ -63,6 +64,10 @@ dependencies:
   email_validator: ^1.0.4
   cloud_firestore:
   firebase_auth:
+  firebase_messaging:
+  flutter_local_notifications:
+  firebase_admob:
+
 
 
 dev_dependencies:
