@@ -14,7 +14,7 @@ List<CategoryModel> getCategory(){
   categoryModel = new CategoryModel();
   //
   categoryModel.imgUrl = "https://images.pexels.com/photos/704320/pexels-photo-704320.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
-  categoryModel.categoriesName = "Wildi Life";
+  categoryModel.categoriesName = "Wild Life";
   category.add(categoryModel);
   categoryModel = new CategoryModel();
   //
@@ -47,6 +47,28 @@ List<CategoryModel> getCategory(){
   categoryModel.imgUrl =
   "https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
   categoryModel.categoriesName = "Cars";
+  category.add(categoryModel);
+  categoryModel = new CategoryModel();
+
+  //
+  categoryModel.imgUrl =
+  "https://images.pexels.com/photos/4215117/pexels-photo-4215117.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
+  categoryModel.categoriesName = "Mountains";
+  category.add(categoryModel);
+  categoryModel = new CategoryModel();
+
+  //
+  categoryModel.imgUrl =
+  "https://images.pexels.com/photos/1573460/pexels-photo-1573460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+  categoryModel.categoriesName = "Dark";
+  category.add(categoryModel);
+  categoryModel = new CategoryModel();
+
+  //
+  //
+  categoryModel.imgUrl =
+  "https://images.pexels.com/photos/2765871/pexels-photo-2765871.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+  categoryModel.categoriesName = "Underwater Photography";
   category.add(categoryModel);
   categoryModel = new CategoryModel();
 
