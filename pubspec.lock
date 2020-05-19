@@ -352,6 +352,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.1.27"
+  full_screen_image:
+    dependency: "direct main"
+    description:
+      name: full_screen_image
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.2"
   glob:
     dependency: transitive
     description:

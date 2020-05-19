@@ -11,12 +11,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:wallpaper/wallpaper.dart';
 
 class ImageView extends StatefulWidget {
-  void main(){
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent,
-      statusBarBrightness: Brightness.light,
-    ));
-  }
+ 
 
   final String imgUrl;
 

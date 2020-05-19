@@ -68,6 +68,7 @@ dependencies:
   flutter_local_notifications:
   firebase_admob:
   quick_actions: ^0.4.0+5
+  full_screen_image: ^1.0.2
 
 
 

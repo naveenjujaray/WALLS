@@ -22,7 +22,10 @@ var routes = <String, WidgetBuilder>{
 };
 
 void main() {
-
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+    statusBarBrightness: Brightness.light,
+  ));
   runApp(
       MyMain()
   );
