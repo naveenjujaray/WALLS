@@ -1,7 +1,6 @@
 import 'package:Walls/commons/image_view.dart';
 import 'package:Walls/commons/wallpaper_model.dart';
 import 'package:flutter/material.dart';
-
 Widget brandName() {
   return
       RichText(

@@ -1,6 +1,7 @@
 import 'package:Walls/blog/editpost.dart';
 import 'package:Walls/blog/postmodel.dart';
 import 'package:Walls/pages/homepage.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../blog/postservice.dart';
 import 'package:timeago/timeago.dart' as timeago;
@@ -18,6 +19,7 @@ class _PostViewState extends State<PostView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       backgroundColor: Colors.black87,
       appBar: AppBar(
         title: Text(widget.post.title),

@@ -11,7 +11,7 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:wallpaper/wallpaper.dart';
 
 class ImageView extends StatefulWidget {
- 
+
 
   final String imgUrl;
 

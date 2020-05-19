@@ -26,20 +26,20 @@ void main() {
     statusBarColor: Colors.transparent,
     statusBarBrightness: Brightness.light,
   ));
-  runApp(
-      MyMain()
-  );
+
+  runApp(MyMain());
 }
+
 class MyMain extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => MyMainState();
-  }
+}
 
 class MyMainState extends State<MyMain> {
   final QuickActions _quickActions = QuickActions();
   FirebaseMessaging firebaseMessaging = new FirebaseMessaging();
   FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-  new FlutterLocalNotificationsPlugin();
+      new FlutterLocalNotificationsPlugin();
 
   @override
   void initState() {
@@ -92,13 +92,13 @@ class MyMainState extends State<MyMain> {
               builder: (ctx) => Search(),
             ),
           );
-        }//else if (shortcut == 'Feedback') {
-          //Navigator.push(
-            //context,
-            //MaterialPageRoute(
-              //builder: (ctx) => BlogPage(),
-            //),
-          //);
+        } //else if (shortcut == 'Feedback') {
+        //Navigator.push(
+        //context,
+        //MaterialPageRoute(
+        //builder: (ctx) => BlogPage(),
+        //),
+        //);
         //}
         else {
           debugPrint('No quick action selected!');
@@ -107,15 +107,13 @@ class MyMainState extends State<MyMain> {
     });
     _quickActions.setShortcutItems(
       <ShortcutItem>[
-         const ShortcutItem(
-            type: 'Home', localizedTitle: 'Home', icon: 'home'),
-         const ShortcutItem(
+        const ShortcutItem(type: 'Home', localizedTitle: 'Home', icon: 'home'),
+        const ShortcutItem(
             type: 'Search', localizedTitle: 'Search', icon: 'search'),
-         //const ShortcutItem(
-           // type: 'Feedback', localizedTitle: 'Feedback',  icon: 'book')
+        //const ShortcutItem(
+        // type: 'Feedback', localizedTitle: 'Feedback',  icon: 'book')
       ],
     );
-
   }
 
   showNotification(Map<String, dynamic> msg) async {
@@ -137,13 +135,10 @@ class MyMainState extends State<MyMain> {
     setState(() {});
   }
 
-
-
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      theme:
-      ThemeData(primaryColor: Colors.black, accentColor: Colors.cyan),
+      theme: ThemeData(primaryColor: Colors.black, accentColor: Colors.cyan),
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
       routes: <String, WidgetBuilder>{
