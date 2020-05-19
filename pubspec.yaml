@@ -67,6 +67,7 @@ dependencies:
   firebase_messaging:
   flutter_local_notifications:
   firebase_admob:
+  quick_actions: ^0.4.0+5
 
 
 
@@ -87,12 +88,12 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
+    - assets/fonts/
 fonts:
   - family: Raleway
     fonts:
       - asset: assets/fonts/Raleway-medium.ttf
       - asset: assets/fonts/Raleway-semibold.ttf
-
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

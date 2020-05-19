@@ -3,19 +3,17 @@ import 'package:Walls/commons/wallpaper_model.dart';
 import 'package:flutter/material.dart';
 
 Widget brandName() {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: <Widget>[
-      Text(
-        "W",
-        style: TextStyle(color: Colors.cyan, fontFamily: 'Overpass'),
+  return
+      RichText(
+      text: TextSpan(
+        style:TextStyle(fontSize: 20),
+        children: <TextSpan>[
+          TextSpan(text: 'W', style: TextStyle(fontSize: 24,color: Colors.cyan,fontWeight: FontWeight.w900,)),
+          TextSpan(text: 'alls'),
+        ],
       ),
-      Text(
-        "alls",
-        style: TextStyle(color: Colors.white, fontFamily: 'Overpass'),
-      )
-    ],
-  );
+    );
+
 }
 
 Widget WallpapersList({List<WallpaperModel> wallpapers, context }){

@@ -1,13 +1,16 @@
-
+import 'dart:io';
+import 'package:flutter/cupertino.dart';
 import 'package:Walls/blog/blogpage.dart';
 import 'package:Walls/pages/aboutpage.dart';
 import 'package:Walls/pages/homepage.dart';
 import 'package:Walls/pages/nav.dart';
+import 'package:Walls/pages/search.dart';
 import 'package:Walls/sidebar/sidebar_layout.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter/services.dart';
+import 'package:quick_actions/quick_actions.dart';
 import 'package:Walls/pages/splash_screen.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
@@ -18,13 +21,19 @@ var routes = <String, WidgetBuilder>{
   "/home": (BuildContext context) => HomePage(),
 };
 
-void main() => runApp(MyMain());
+void main() {
+
+  runApp(
+      MyMain()
+  );
+}
 class MyMain extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => MyMainState();
   }
 
 class MyMainState extends State<MyMain> {
+  final QuickActions _quickActions = QuickActions();
   FirebaseMessaging firebaseMessaging = new FirebaseMessaging();
   FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
   new FlutterLocalNotificationsPlugin();
@@ -62,6 +71,48 @@ class MyMainState extends State<MyMain> {
     firebaseMessaging.getToken().then((token) {
       update(token);
     });
+
+    _quickActions.initialize((String shortcut) {
+      print(shortcut);
+      if (shortcut != null) {
+        if (shortcut == 'Home') {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (ctx) => HomePage(),
+            ),
+          );
+        } else if (shortcut == 'Search') {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (ctx) => Search(),
+            ),
+          );
+        }//else if (shortcut == 'Feedback') {
+          //Navigator.push(
+            //context,
+            //MaterialPageRoute(
+              //builder: (ctx) => BlogPage(),
+            //),
+          //);
+        //}
+        else {
+          debugPrint('No quick action selected!');
+        }
+      }
+    });
+    _quickActions.setShortcutItems(
+      <ShortcutItem>[
+         const ShortcutItem(
+            type: 'Home', localizedTitle: 'Home', icon: 'home'),
+         const ShortcutItem(
+            type: 'Search', localizedTitle: 'Search', icon: 'search'),
+         //const ShortcutItem(
+           // type: 'Feedback', localizedTitle: 'Feedback',  icon: 'book')
+      ],
+    );
+
   }
 
   showNotification(Map<String, dynamic> msg) async {
@@ -82,6 +133,8 @@ class MyMainState extends State<MyMain> {
     databaseReference.child('fcm-token/$token').set({"token": token});
     setState(() {});
   }
+
+
 
   @override
   Widget build(BuildContext context) {

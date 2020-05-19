@@ -44,6 +44,7 @@ class _CategorieState extends State<Categorie> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        centerTitle: true,
         title: brandName(),
         elevation: 0.0,
       ),

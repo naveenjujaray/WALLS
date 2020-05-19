@@ -11,6 +11,13 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:wallpaper/wallpaper.dart';
 
 class ImageView extends StatefulWidget {
+  void main(){
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light,
+    ));
+  }
+
   final String imgUrl;
 
   ImageView({@required this.imgUrl});
@@ -20,6 +27,7 @@ class ImageView extends StatefulWidget {
 }
 
 class _ImageViewState extends State<ImageView> {
+
   var imgPath;
 
   String home = "Home Screen",
@@ -203,6 +211,7 @@ class _ImageViewState extends State<ImageView> {
     }
     var response = await Dio()
         .get(widget.imgUrl, options: Options(responseType: ResponseType.bytes));
+    await ImageGallerySaver.saveImage(Uint8List.fromList(response.data));
     home = await Wallpaper.homeScreen(widget.imgUrl);
     final result =  home = home;
     print(result);
@@ -214,6 +223,7 @@ class _ImageViewState extends State<ImageView> {
     }
     var response = await Dio()
         .get(widget.imgUrl, options: Options(responseType: ResponseType.bytes));
+    await ImageGallerySaver.saveImage(Uint8List.fromList(response.data));
     home = await Wallpaper.lockScreen(widget.imgUrl);
     final result =  home = lock;
     print(result);

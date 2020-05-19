@@ -53,6 +53,7 @@ class _SearchState extends State<Search> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        centerTitle: true,
         title: brandName(),
         elevation: 0.0,
       ),
@@ -61,7 +62,6 @@ class _SearchState extends State<Search> {
           child: Column(
             children: <Widget>[
               Container(
-
                 decoration: BoxDecoration(
                   color: Color(0xfff5f8fd).withOpacity(0.2),
                     borderRadius: BorderRadius.circular(30),
@@ -72,14 +72,13 @@ class _SearchState extends State<Search> {
                   children: <Widget>[
                     Expanded(
                       child: TextField(
-
                         controller: searchController,
                         decoration: InputDecoration(
                           hintStyle: TextStyle(color: Colors.white),
                           hintText: ("Search Walls"),
                           border: InputBorder.none,
                         ),
-                        style: (TextStyle(color: Colors.white)),
+                        style: (TextStyle(color: Colors.white,)),
                       ),
 
                     ),

@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:Walls/bloc/navigation_bloc/dashboard_navigation.dart';
 import 'package:Walls/commons/category_model.dart';
 import 'package:Walls/commons/data.dart';
@@ -56,6 +57,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        centerTitle: true,
         title: brandName(),
         elevation: 0.0,
       ),
