@@ -5,6 +5,7 @@ import 'package:Walls/commons/category_model.dart';
 import 'package:Walls/commons/data.dart';
 import 'package:Walls/commons/image_view.dart';
 import 'package:Walls/commons/wallpaper_model.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/foundation/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:Walls/bloc/navigation_bloc/navigation_bloc.dart';
@@ -57,72 +58,75 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        centerTitle: true,
-        title: brandName(),
+          centerTitle: true,
+          title: brandName(
+          ),
         elevation: 0.0,
-      ),
+        ),
       body: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            children: <Widget>[
-              Container(
-                decoration: BoxDecoration(
-                  color: Color(0xfff5f8fd).withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(30)
-                ),
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                margin: EdgeInsets.symmetric(horizontal: 50),
-                child: Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: TextField(
-                        controller: searchController,
-                        decoration: InputDecoration(
-                          hintStyle: TextStyle(color: Colors.white),
-                          hintText: "Search Walls",
-                          border: InputBorder.none,
+          child: Container(
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                    color: Color(0xfff5f8fd).withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(30)
+                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  margin: EdgeInsets.symmetric(horizontal: 50),
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: TextField(
+                          controller: searchController,
+                          decoration: InputDecoration(
+                            hintStyle: TextStyle(color: Colors.white),
+                            hintText: "Search Walls",
+                            border: InputBorder.none,
+                          ),
+                          style: (TextStyle(color: Colors.white)),
                         ),
-                        style: (TextStyle(color: Colors.white)),
                       ),
-                    ),
-                    GestureDetector(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => Search(
-                            searchQuery: searchController.text,
-                          )
-                        ));
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(
+                            builder: (context) => Search(
+                              searchQuery: searchController.text,
+                            )
+                          ));
 
-                      },
-                      child: Container(
-                          child: Icon(Icons.search,color: Colors.white,)),
-                    )
-                  ],
+                        },
+                        child: Container(
+                            child: Icon(Icons.search,color: Colors.white,)),
+                      )
+                    ],
+                  ),
                 ),
-              ),
 
-              SizedBox(height: 16,),
-              Container(
-                height: 80,
-                child: ListView.builder(
-                  padding: EdgeInsets.symmetric(horizontal: 24),
-                  itemCount: category.length,
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index){
+                SizedBox(height: 16,),
+                Container(
+                  height: 80,
+                  child: ListView.builder(
+                    padding: EdgeInsets.symmetric(horizontal: 24),
+                    itemCount: category.length,
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index){
 
-                    return CategoryTile(
-                      title: category[index].categoriesName,
-                      imgUrl: category[index].imgUrl,
-                    );
-                }),
-              ),
-              WallpapersList(wallpapers: wallpapers,context: context)
-            ],
+                      return CategoryTile(
+                        title: category[index].categoriesName,
+                        imgUrl: category[index].imgUrl,
+                      );
+                  }),
+                ),
+                WallpapersList(wallpapers: wallpapers,context: context)
+              ],
+            ),
           ),
         ),
-      ),
-    );
+      );
   }
 }
 class CategoryTile extends StatelessWidget {
