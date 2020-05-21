@@ -107,9 +107,10 @@ class MyMainState extends State<MyMain> {
     });
     _quickActions.setShortcutItems(
       <ShortcutItem>[
-        const ShortcutItem(type: 'Home', localizedTitle: 'Home', icon: 'home'),
+        //const ShortcutItem(type: 'Home', localizedTitle: 'Home', icon: 'home'),
         const ShortcutItem(
-            type: 'Search', localizedTitle: 'Search', icon: 'search'),
+            type: 'Home', localizedTitle: 'New Wallpapers', icon: 'walls'),
+
         //const ShortcutItem(
         // type: 'Feedback', localizedTitle: 'Feedback',  icon: 'book')
       ],

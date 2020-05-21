@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:Walls/bloc/navigation_bloc/dashboard_navigation.dart';
 import 'package:Walls/commons/category_model.dart';
 import 'package:Walls/commons/data.dart';
@@ -10,6 +9,7 @@ import 'package:flutter/src/foundation/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:Walls/bloc/navigation_bloc/navigation_bloc.dart';
 import 'package:Walls/pages/widget.dart';
+import 'package:rate_my_app/rate_my_app.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:http/http.dart' as http;
 import 'package:Walls/pages/search.dart';
@@ -45,11 +45,13 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+
   @override
   void initState() {
     getTrendingWallpapers();
     category = getCategory();
     super.initState();
+
   }
 
 
