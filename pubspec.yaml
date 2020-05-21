@@ -69,8 +69,8 @@ dependencies:
   firebase_admob:
   quick_actions: ^0.4.0+5
   full_screen_image: ^1.0.2
-  rate_my_app: ^0.6.1+2
-  smooth_star_rating: ^1.1.0+1
+  launch_review: ^2.0.0
+  align_positioned: ^1.2.6
 
 
 

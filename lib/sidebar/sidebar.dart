@@ -1,20 +1,18 @@
-import 'dart:io';
 import 'package:Walls/rating/smiley_painter.dart';
-import 'package:Walls/blog/services/usermanagement.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:rxdart/rxdart.dart';
 import 'dart:async';
 import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:Walls/bloc/navigation_bloc/navigation_bloc.dart';
-import 'package:Walls/commons/rounded_image.dart';
-import 'package:Walls/pages/homepage.dart';
 import 'package:Walls/sidebar/menu_item.dart';
-import 'package:rate_my_app/rate_my_app.dart';
+import 'package:Walls/rating/launch_review.dart';
 class SideBar extends StatefulWidget {
 
   @override
   _SideBarState createState() => _SideBarState();
+ 
 }
 
 class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin{
@@ -22,8 +20,9 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin{
   StreamController<bool> isSidebarOpenedStreamController;
   Stream<bool> isSidebarOpenedStream;
   StreamSink<bool> isSidebarOpenedSink;
-
+  
   final _animationDuration = const Duration(milliseconds: 500);
+
 
 
   @override
@@ -78,6 +77,7 @@ void onIconPressed() {
           child: Row(
             children: <Widget>[
               Expanded(child: Container(
+                alignment: Alignment.topLeft,
                 color: Colors.black,
                 child: Column(
                   children: <Widget>[
@@ -150,7 +150,9 @@ void onIconPressed() {
                               positiveButtonColor: Colors.blueAccent,
                               negativeButtonColor: Colors.grey,
                               onCancelPressed: () => Navigator.pop(context),
-                              onSubmitPressed: (rating) {},
+                              onSubmitPressed: (rating)  { LaunchReview.launch(
+                                androidAppId: "com.naveenjujaray.walls",
+                              ); },
                             ));
                       },
                     ),
@@ -163,6 +165,27 @@ void onIconPressed() {
                         BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.AboutPageClickedEvent);
                       },
                     ),//About Me
+                    SizedBox(height: 20,),
+                    RaisedButton(
+                      splashColor: Colors.green,
+                      color: Colors.blueAccent,
+                      colorBrightness: Brightness.dark,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(30.0),
+                          side: BorderSide(color: Colors.black),
+                        ),
+                      onPressed: () {},
+                      padding: EdgeInsets.all(13.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(FontAwesomeIcons.mugHot,),
+                          SizedBox(width: 10,),
+                          Text("Buy me coffee",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 20),),
+                        ],
+                         ),
+                    )
+
 
                   ],
                 ),
@@ -200,6 +223,7 @@ void onIconPressed() {
     );
   }
 }
+
 class CustomMenuClipper extends CustomClipper<Path> {
   @override
    Path getClip(Size size) {

@@ -8,6 +8,29 @@ List<CategoryModel> getCategory(){
   CategoryModel categoryModel = new CategoryModel();
 
   //
+  categoryModel.imgUrl =
+  "https://images.pexels.com/photos/1149019/pexels-photo-1149019.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+  categoryModel.categoriesName = "Abstract";
+  category.add(categoryModel);
+  categoryModel = new CategoryModel();
+
+  //
+  categoryModel.imgUrl =
+  "https://images.pexels.com/photos/3889660/pexels-photo-3889660.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+  categoryModel.categoriesName = "Adventures";
+  category.add(categoryModel);
+  categoryModel = new CategoryModel();
+
+
+  //
+  categoryModel.imgUrl =
+  "https://images.pexels.com/photos/33684/astronaut-spacewalk-iss-tools.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+  categoryModel.categoriesName = "Space";
+  category.add(categoryModel);
+  categoryModel = new CategoryModel();
+
+
+  //
   categoryModel.imgUrl = "https://images.pexels.com/photos/545008/pexels-photo-545008.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500";
   categoryModel.categoriesName = "Street Art";
   category.add(categoryModel);
@@ -59,7 +82,7 @@ List<CategoryModel> getCategory(){
 
   //
   categoryModel.imgUrl =
-  "https://images.pexels.com/photos/1573460/pexels-photo-1573460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+  "https://images.pexels.com/photos/716398/pexels-photo-716398.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
   categoryModel.categoriesName = "Dark";
   category.add(categoryModel);
   categoryModel = new CategoryModel();
@@ -71,6 +94,7 @@ List<CategoryModel> getCategory(){
   categoryModel.categoriesName = "Underwater Photography";
   category.add(categoryModel);
   categoryModel = new CategoryModel();
+
 
   return category;
 

@@ -9,7 +9,6 @@ import 'package:flutter/src/foundation/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:Walls/bloc/navigation_bloc/navigation_bloc.dart';
 import 'package:Walls/pages/widget.dart';
-import 'package:rate_my_app/rate_my_app.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:http/http.dart' as http;
 import 'package:Walls/pages/search.dart';
