@@ -44,8 +44,8 @@ android {
         applicationId "com.naveenjujaray.walls"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 5
-        versionName "2.0"
+        versionCode 7
+        versionName "2.2"
     }
     signingConfigs{
         release{
@@ -58,7 +58,7 @@ android {
 
     buildTypes {
         release {
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
             minifyEnabled true
         }
        debug{

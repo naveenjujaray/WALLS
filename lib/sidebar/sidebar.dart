@@ -1,19 +1,18 @@
-import 'dart:io';
-
-import 'package:Walls/blog/services/usermanagement.dart';
+import 'package:Walls/rating/smiley_painter.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:rxdart/rxdart.dart';
 import 'dart:async';
 import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:Walls/bloc/navigation_bloc/navigation_bloc.dart';
-import 'package:Walls/commons/rounded_image.dart';
-import 'package:Walls/pages/homepage.dart';
 import 'package:Walls/sidebar/menu_item.dart';
+import 'package:Walls/rating/launch_review.dart';
 class SideBar extends StatefulWidget {
 
   @override
   _SideBarState createState() => _SideBarState();
+ 
 }
 
 class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin{
@@ -21,8 +20,10 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin{
   StreamController<bool> isSidebarOpenedStreamController;
   Stream<bool> isSidebarOpenedStream;
   StreamSink<bool> isSidebarOpenedSink;
-
+  
   final _animationDuration = const Duration(milliseconds: 500);
+
+
 
   @override
   void initState() {
@@ -32,6 +33,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin{
     isSidebarOpenedStreamController = PublishSubject<bool>();
     isSidebarOpenedStream = isSidebarOpenedStreamController.stream;
     isSidebarOpenedSink = isSidebarOpenedStreamController.sink;
+
 
   }
 
@@ -75,6 +77,7 @@ void onIconPressed() {
           child: Row(
             children: <Widget>[
               Expanded(child: Container(
+                alignment: Alignment.topLeft,
                 color: Colors.black,
                 child: Column(
                   children: <Widget>[
@@ -131,6 +134,30 @@ void onIconPressed() {
                       //},
                     //),//About Me
                     MenuItem(
+                      icon: Icons.star,
+                      title: "Rate",
+                      onTap: () {
+                        onIconPressed();
+                        showDialog(
+                            barrierDismissible: true,
+                            context: context,
+                            builder: (context) => SmileyRatingDialog(
+                              title: Text('Rate Walls',style: TextStyle(color: Colors.white),),
+                              starColor: Colors.yellow,
+                              isRoundedButtons: true,
+                              positiveButtonText: 'Ok',
+                              negativeButtonText: 'Cancel',
+                              positiveButtonColor: Colors.blueAccent,
+                              negativeButtonColor: Colors.grey,
+                              onCancelPressed: () => Navigator.pop(context),
+                              onSubmitPressed: (rating)  { LaunchReview.launch(
+                                androidAppId: "com.naveenjujaray.walls",
+                              ); },
+                            ));
+                      },
+                    ),
+
+                    MenuItem(
                       icon: Icons.person,
                       title: "About Me",
                       onTap: () {
@@ -138,6 +165,26 @@ void onIconPressed() {
                         BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.AboutPageClickedEvent);
                       },
                     ),//About Me
+                    SizedBox(height: 20,),
+                    RaisedButton(
+                      splashColor: Colors.green,
+                      color: Colors.blueAccent,
+                      colorBrightness: Brightness.dark,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(30.0),
+                          side: BorderSide(color: Colors.black),
+                        ),
+                      onPressed: () {},
+                      padding: EdgeInsets.all(13.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(FontAwesomeIcons.mugHot,),
+                          SizedBox(width: 10,),
+                          Text("Buy me coffee",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 20),),
+                        ],
+                         ),
+                    )
 
 
                   ],
@@ -176,6 +223,7 @@ void onIconPressed() {
     );
   }
 }
+
 class CustomMenuClipper extends CustomClipper<Path> {
   @override
    Path getClip(Size size) {
@@ -200,4 +248,118 @@ class CustomMenuClipper extends CustomClipper<Path> {
     return true;
   }
 
+}
+
+class SmileyRatingDialog extends StatefulWidget{
+
+  // Color of star buttons
+  final Color starColor;
+
+  // Called when positive button is clicked
+  final ValueSetter<int> onSubmitPressed;
+
+  // Called when negative button is clicked
+  final VoidCallback onCancelPressed;
+
+  // Text of Positive Button
+  final String positiveButtonText;
+
+  // Text of Positive Button
+  final String negativeButtonText;
+
+  // Color of Positive Button
+  final Color positiveButtonColor;
+
+  // Color of Positive Button
+  final Color negativeButtonColor;
+
+  // Title of Dialog
+  final Widget title;
+
+  // Whether the corners of the buttons should be rounded or not
+  final bool isRoundedButtons;
+
+  SmileyRatingDialog(
+      {this.starColor = Colors.yellow,
+        this.title,
+        @required this.onSubmitPressed,
+        @required this.onCancelPressed,
+        @required this.positiveButtonText,
+        @required this.negativeButtonText,
+        this.isRoundedButtons = true,
+        this.positiveButtonColor = Colors.amber,
+        this.negativeButtonColor = Colors.amber});
+
+  @override
+  _SmileyRatingDialogState createState() => _SmileyRatingDialogState();
+}
+
+class _SmileyRatingDialogState extends State<SmileyRatingDialog> {
+  int _rating = 0;
+
+  List<Widget> _starWidgets() {
+    List<Widget> buttons = [];
+
+    for (int rateValue = 1; rateValue <= 5; rateValue++) {
+      final starRatingButton = IconButton(
+          icon: Icon(_rating >= rateValue ? Icons.star : Icons.star_border,
+              color: widget.starColor, size: 35),
+          onPressed: () {
+            setState(() {
+              _rating = rateValue;
+            });
+          });
+      buttons.add(starRatingButton);
+    }
+
+    return buttons;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      backgroundColor: Colors.black,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+      title: widget.title,
+      contentPadding: EdgeInsets.all(20.0),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Container(
+            width: 100.0,
+            height: 100.0,
+            child: CustomPaint(
+              painter: SmileyPainter(rating: _rating),
+            ),
+          ),
+          Row(children: _starWidgets()),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              FlatButton(
+                shape: BeveledRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                        widget.isRoundedButtons ? 4.0 : 0.0)),
+                color: widget.positiveButtonColor,
+                onPressed: () {
+                  widget.onSubmitPressed(_rating);
+                },
+                child: Text(widget.positiveButtonText),
+              ),
+              FlatButton(
+                shape: BeveledRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                        widget.isRoundedButtons ? 4.0 : 0.0)),
+                color: widget.negativeButtonColor,
+                onPressed: () {
+                  widget.onCancelPressed();
+                },
+                child: Text(widget.negativeButtonText),
+              ),
+            ],
+          )
+        ],
+      ),
+    );
+  }
 }

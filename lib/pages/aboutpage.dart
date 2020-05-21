@@ -65,15 +65,18 @@ class AboutPage extends StatelessWidget with NavigationStates,DashboardStates{
                       "Source code is available in Github.",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18),),
                     ),
                   ],
+
                 ),
+
                 ),
               ),
               Expanded(
+
                 child: SingleChildScrollView(
                 child: Row(
                   children: <Widget>[
                     _buildSocialsRow(),
-                    SizedBox(height: 20.0,),
+                    SizedBox(height: 10.0,),
                   ],
                 ),
                 ),
@@ -132,6 +135,38 @@ class AboutPage extends StatelessWidget with NavigationStates,DashboardStates{
           icon: Icon(FontAwesomeIcons.linkedin),
           onPressed: (){
             _launchURL("https://www.linkedin.com/in/naveen-jujaray-b5776456/");
+          },
+        ),
+        SizedBox(width: 5.0),
+        IconButton(
+          color: Colors.black,
+          icon: Icon(FontAwesomeIcons.userAstronaut),
+          onPressed: (){
+            _launchURL("https://naveenjujaray.netlify.app/#");
+          },
+        ),
+        SizedBox(width: 5.0),
+        IconButton(
+          color: Colors.black,
+          icon: Icon(FontAwesomeIcons.whatsapp),
+          onPressed: (){
+            _launchURL("whatsapp://send?text=https://play.google.com/store/apps/details?id=com.naveenjujaray.walls");
+            },
+        ),
+        SizedBox(width: 5.0),
+        IconButton(
+          color: Colors.black,
+          icon: Icon(FontAwesomeIcons.instagram),
+          onPressed: (){
+            _launchURL("https://www.instagram.com/naveenjujaray/");
+          },
+        ),
+        SizedBox(width: 5.0),
+        IconButton(
+          color: Colors.black,
+          icon: Icon(FontAwesomeIcons.twitter),
+          onPressed: (){
+            _launchURL("https://twitter.com/naveenjujaray");
           },
         ),
         SizedBox(width: 10.0),

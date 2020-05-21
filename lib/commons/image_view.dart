@@ -206,7 +206,7 @@ class _ImageViewState extends State<ImageView> {
     }
     var response = await Dio()
         .get(widget.imgUrl, options: Options(responseType: ResponseType.bytes));
-    await ImageGallerySaver.saveImage(Uint8List.fromList(response.data));
+    //await ImageGallerySaver.saveImage(Uint8List.fromList(response.data));
     home = await Wallpaper.homeScreen(widget.imgUrl);
     final result =  home = home;
     print(result);
@@ -218,7 +218,7 @@ class _ImageViewState extends State<ImageView> {
     }
     var response = await Dio()
         .get(widget.imgUrl, options: Options(responseType: ResponseType.bytes));
-    await ImageGallerySaver.saveImage(Uint8List.fromList(response.data));
+    //await ImageGallerySaver.saveImage(Uint8List.fromList(response.data));
     home = await Wallpaper.lockScreen(widget.imgUrl);
     final result =  home = lock;
     print(result);

@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:Walls/bloc/navigation_bloc/dashboard_navigation.dart';
 import 'package:Walls/commons/category_model.dart';
 import 'package:Walls/commons/data.dart';
@@ -45,11 +44,13 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+
   @override
   void initState() {
     getTrendingWallpapers();
     category = getCategory();
     super.initState();
+
   }
 
 

@@ -1,6 +1,7 @@
 import 'package:Walls/bloc/navigation_bloc/dashboard_navigation.dart';
 import 'package:Walls/bloc/navigation_bloc/navigation_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MenuItem extends StatelessWidget with DashboardStates,NavigationStates{
   final IconData icon;
@@ -18,6 +19,7 @@ class MenuItem extends StatelessWidget with DashboardStates,NavigationStates{
             child: Row(
               children: <Widget>[
               Icon(
+
               icon,
               color: Colors.cyan,
               size: 30,
