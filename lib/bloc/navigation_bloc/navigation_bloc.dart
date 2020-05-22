@@ -16,7 +16,6 @@ enum NavigationEvents {
     LoginPageClickedEvent,
     UserPageClickedEvent,
     SignoutClickedEvent,
-    DonateClickedEvent,
     }
 
     abstract class NavigationStates{}

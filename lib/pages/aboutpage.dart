@@ -61,8 +61,8 @@ class AboutPage extends StatelessWidget with NavigationStates,DashboardStates{
                         borderRadius: BorderRadius.circular(30),
                           color: Colors.grey.shade200,
                       ),
-                      child: Text("These images are gathered from Pexels, Walls was developed using Flutter in Android Studio. "
-                      "Source code is available in Github.",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18),),
+                      child: Text(" Walls is an Open Source Application built for Android using Flutter. Where it has the World's most generous community of Photographers"
+                      "to make your phone's personality.",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18),),
                     ),
                   ],
 
@@ -114,62 +114,46 @@ class AboutPage extends StatelessWidget with NavigationStates,DashboardStates{
     return Row(
       children: <Widget>[
         SizedBox(width: 20.0),
+       // IconButton(
+         // color: Colors.black,
+          //icon: Icon(FontAwesomeIcons.facebookF),
+          //onPressed: (){
+           // _launchURL("https://facebook.com/naveenjujaray");
+          //},
+        //),
+        //SizedBox(width: 5.0),
+       // IconButton(
+//          color: Colors.black,
+  //        icon: Icon(FontAwesomeIcons.github),
+    //      onPressed: (){
+      //      _launchURL("https://github.com/naveenjujaray");
+        //  },
+  //    ),
+   //     SizedBox(width: 5.0),
+   //     IconButton(
+     //     color: Colors.black,
+    //      icon: Icon(FontAwesomeIcons.linkedin),
+     //     onPressed: (){
+      //      _launchURL("https://www.linkedin.com/in/naveen-jujaray-b5776456/");
+     //     },
+   //     ),
+    //    SizedBox(width: 5.0),
         IconButton(
           color: Colors.black,
-          icon: Icon(FontAwesomeIcons.facebookF),
-          onPressed: (){
-            _launchURL("https://facebook.com/naveenjujaray");
-          },
-        ),
-        SizedBox(width: 5.0),
-        IconButton(
-          color: Colors.black,
-          icon: Icon(FontAwesomeIcons.github),
-          onPressed: (){
-            _launchURL("https://github.com/naveenjujaray");
-          },
-        ),
-        SizedBox(width: 5.0),
-        IconButton(
-          color: Colors.black,
-          icon: Icon(FontAwesomeIcons.linkedin),
-          onPressed: (){
-            _launchURL("https://www.linkedin.com/in/naveen-jujaray-b5776456/");
-          },
-        ),
-        SizedBox(width: 5.0),
-        IconButton(
-          color: Colors.black,
-          icon: Icon(FontAwesomeIcons.userAstronaut),
+          icon: Icon(FontAwesomeIcons.userAstronaut, color: Colors.purple),
           onPressed: (){
             _launchURL("https://naveenjujaray.netlify.app/#");
           },
         ),
         SizedBox(width: 5.0),
-        IconButton(
-          color: Colors.black,
-          icon: Icon(FontAwesomeIcons.whatsapp),
-          onPressed: (){
-            _launchURL("whatsapp://send?text=https://play.google.com/store/apps/details?id=com.naveenjujaray.walls");
-            },
-        ),
-        SizedBox(width: 5.0),
-        IconButton(
-          color: Colors.black,
-          icon: Icon(FontAwesomeIcons.instagram),
-          onPressed: (){
-            _launchURL("https://www.instagram.com/naveenjujaray/");
-          },
-        ),
-        SizedBox(width: 5.0),
-        IconButton(
-          color: Colors.black,
-          icon: Icon(FontAwesomeIcons.twitter),
-          onPressed: (){
-            _launchURL("https://twitter.com/naveenjujaray");
-          },
-        ),
-        SizedBox(width: 10.0),
+      //  IconButton(
+       //   color: Colors.black,
+         // icon: Icon(FontAwesomeIcons.whatsapp),
+  //        onPressed: (){
+    //        _launchURL("whatsapp://send?text=https://play.google.com/store/apps/details?id=com.naveenjujaray.walls");
+      //      },
+     //   ),
+
       ],
     );
   }
