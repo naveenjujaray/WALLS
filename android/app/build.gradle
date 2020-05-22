@@ -44,8 +44,8 @@ android {
         applicationId "com.naveenjujaray.walls"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 7
-        versionName "2.2"
+        versionCode 9
+        versionName "2.3"
     }
     signingConfigs{
         release{
@@ -80,10 +80,11 @@ apply plugin: 'com.google.gms.google-services'
 
 dependencies {
     // add the Firebase SDK for Google Analytics
-    implementation 'com.google.firebase:firebase-analytics:17.4.1'
-    implementation 'com.google.firebase:firebase-messaging:20.1.7'
+    implementation 'com.google.firebase:firebase-analytics:17.4.2'
+    implementation 'com.google.firebase:firebase-messaging:20.2.0'
     implementation 'com.google.firebase:firebase-database:19.3.0'
     implementation 'com.google.android.gms:play-services-ads:19.1.0'
+    implementation 'com.android.billingclient:billing:2.2.1'
     // add SDKs for any other desired Firebase products
     // https://firebase.google.com/docs/android/setup#available-libraries
 }

@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:Walls/rating/smiley_painter.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -8,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:Walls/bloc/navigation_bloc/navigation_bloc.dart';
 import 'package:Walls/sidebar/menu_item.dart';
 import 'package:Walls/rating/launch_review.dart';
+import 'package:in_app_purchase/in_app_purchase.dart';
 class SideBar extends StatefulWidget {
 
   @override
@@ -16,6 +18,24 @@ class SideBar extends StatefulWidget {
 }
 
 class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin{
+   String coffee_button = 'coffee_button';
+   String tenrs ='tenrs';
+  /// Is the API available on the device
+  bool available = true;
+
+  /// The In App Purchase plugin
+  InAppPurchaseConnection _iap = InAppPurchaseConnection.instance;
+
+  /// Products for sale
+  List<ProductDetails> _products = [];
+
+  /// Past purchases
+  List<PurchaseDetails> _purchases = [];
+
+  /// Updates to purchases
+  StreamSubscription _subscription;
+
+
   AnimationController _animationController ;
   StreamController<bool> isSidebarOpenedStreamController;
   Stream<bool> isSidebarOpenedStream;
@@ -27,6 +47,7 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin{
 
   @override
   void initState() {
+    _initialize();
     // TODO: implement initState
     super.initState();
     _animationController = AnimationController(vsync: this, duration: _animationDuration);
@@ -43,8 +64,79 @@ class _SideBarState extends State<SideBar> with SingleTickerProviderStateMixin{
     _animationController.dispose();
     isSidebarOpenedStreamController.close();
     isSidebarOpenedSink.close();
+    _subscription.cancel();
     super.dispose();
   }
+
+  void _initialize() async {
+    // Check availability of In App Purchases
+    available = await _iap.isAvailable();
+
+    if (available) {
+      await _getProducts();
+      await _getPastPurchases();
+
+      // Verify and deliver a purchase with your own business logic
+      _verifyPurchase();
+    }
+    _subscription = _iap.purchaseUpdatedStream.listen((data) => setState(() {
+      print('NEW PURCHASE');
+      _purchases.addAll(data);
+      _verifyPurchase();
+    }));
+  }
+
+  void _buyProduct(ProductDetails prod) {
+    final PurchaseParam purchaseParam = PurchaseParam(productDetails: prod);
+     _iap.buyNonConsumable(purchaseParam: purchaseParam);
+   // _iap.buyConsumable(purchaseParam: purchaseParam, autoConsume: false);
+  }
+
+  Future<void> _getProducts() async {
+    Set<String> ids = Set.from([coffee_button]);
+    ProductDetailsResponse response = await _iap.queryProductDetails(ids);
+
+    setState(() {
+      _products = response.productDetails;
+      _products.sort((a, b) => a.title.length.compareTo(b.title.length));
+    });
+  }
+
+  /// Gets past purchases
+  Future<void> _getPastPurchases() async {
+    QueryPurchaseDetailsResponse response =
+    await _iap.queryPastPurchases();
+
+    for (PurchaseDetails purchase in response.pastPurchases) {
+      if (Platform.isIOS) {
+        InAppPurchaseConnection.instance.completePurchase(purchase);
+      }
+    }
+
+    setState(() {
+      _purchases = response.pastPurchases;
+    });
+  }
+
+  /// Returns purchase of specific product ID
+  PurchaseDetails _hasPurchased(String productID) {
+    return _purchases.lastWhere((purchase) => purchase.productID == productID, orElse: () => null);
+  }
+
+  /// Your own business logic to setup a consumable
+  void _verifyPurchase() {
+    PurchaseDetails purchase = _hasPurchased(coffee_button);
+    // TODO serverside verification & record consumable in the database
+
+    if (purchase != null && purchase.status == PurchaseStatus.purchased) {
+
+     // _credits = 10;
+    }
+  }
+
+
+
+
 void onIconPressed() {
     final animationStatus = _animationController.status;
     final isAnimationCompleted = animationStatus == AnimationStatus.completed;
@@ -166,25 +258,35 @@ void onIconPressed() {
                       },
                     ),//About Me
                     SizedBox(height: 20,),
-                    RaisedButton(
-                      splashColor: Colors.green,
-                      color: Colors.blueAccent,
-                      colorBrightness: Brightness.dark,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(30.0),
-                          side: BorderSide(color: Colors.black),
-                        ),
-                      onPressed: () {},
-                      padding: EdgeInsets.all(13.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Icon(FontAwesomeIcons.mugHot,),
-                          SizedBox(width: 10,),
-                          Text("Buy me coffee",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 20),),
-                        ],
-                         ),
-                    )
+                        RaisedButton(
+                          splashColor: Colors.green,
+                          color: Colors.blueAccent,
+                          colorBrightness: Brightness.dark,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(30.0),
+                            side: BorderSide(color: Colors.black),
+                          ),
+                          onPressed: () => {
+                          for(var prod in _products){
+                            Text(prod.title, style: Theme.of(context).textTheme.headline),
+                            Text(prod.description),
+                             Text(prod.price,
+                                 style: TextStyle(color: Colors.greenAccent, fontSize: 60)),
+                            _buyProduct(prod),},
+                          },
+                          padding: EdgeInsets.all(13.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+
+                              Icon(FontAwesomeIcons.mugHot,),
+                              SizedBox(width: 10,),
+                              Text("Buy me coffee",style: TextStyle(fontWeight: FontWeight.w800,fontSize: 20),),
+                            ],
+                          ),
+                        )
+
+
 
 
                   ],
