@@ -44,8 +44,8 @@ android {
         applicationId "com.naveenjujaray.walls"
         minSdkVersion 16
         targetSdkVersion 28
-        versionCode 10
-        versionName "2.3.1"
+        versionCode 11
+        versionName "2.3.2"
     }
     signingConfigs{
         release{

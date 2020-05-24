@@ -62,7 +62,7 @@ class AboutPage extends StatelessWidget with NavigationStates,DashboardStates{
                           color: Colors.grey.shade200,
                       ),
                       child: Text(" Walls is an Open Source Application built for Android using Flutter. Where it has the World's most generous community of Photographers"
-                      "to make your phone's personality.",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18),),
+                      " to make your phone's personality.",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 18),),
                     ),
                   ],
 
