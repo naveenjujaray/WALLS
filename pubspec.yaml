@@ -71,6 +71,7 @@ dependencies:
   full_screen_image: ^1.0.2
   launch_review: ^2.0.0
   in_app_purchase: ^0.3.3+2
+  wiredash:
 
 
 

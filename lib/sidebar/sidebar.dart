@@ -10,6 +10,7 @@ import 'package:Walls/bloc/navigation_bloc/navigation_bloc.dart';
 import 'package:Walls/sidebar/menu_item.dart';
 import 'package:Walls/rating/launch_review.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
+import 'package:wiredash/wiredash.dart';
 class SideBar extends StatefulWidget {
 
   @override
@@ -155,6 +156,16 @@ void onIconPressed() {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
+    int _counter =0;
+    void _incrementCounter()
+    {
+      setState(
+              (){
+            _counter++;
+          }
+      );
+      Wiredash.of(context).show();
+    }
 
     return StreamBuilder<bool>(
       initialData: false,
@@ -209,14 +220,14 @@ void onIconPressed() {
                         // BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.SettingsPageClickedEvent);
                       // },
                     // ),//Settings
-                    MenuItem(
-                      icon: Icons.library_books,
-                      title: "Feedback",
-                      onTap: () {
-                        onIconPressed();
-                        BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.BlogPageClickedEvent);
-                      },
-                    ),//About Me
+                   // MenuItem(
+                     // icon: Icons.library_books,
+                     // title: "Feedback",
+                    //  onTap: () {
+                      //  onIconPressed:
+                    //    BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.BlogPageClickedEvent);
+                    //  },
+                   // ),//About Me
                    // MenuItem(
                      // icon: Icons.vpn_key,
                       //title: "Login",

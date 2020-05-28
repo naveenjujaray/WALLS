@@ -826,6 +826,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.0.8"
+  wiredash:
+    dependency: "direct main"
+    description:
+      name: wiredash
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.0"
   yaml:
     dependency: transitive
     description:
