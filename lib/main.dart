@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
-import 'package:Walls/blog/blogpage.dart';
 import 'package:Walls/pages/aboutpage.dart';
 import 'package:Walls/pages/homepage.dart';
 import 'package:Walls/pages/nav.dart';
@@ -14,9 +13,7 @@ import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:quick_actions/quick_actions.dart';
 import 'package:Walls/pages/splash_screen.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-
-import 'blog/adminonly.dart';
-import 'blog/loginpage.dart';
+import 'package:wiredash/wiredash.dart';
 
 var routes = <String, WidgetBuilder>{
   "/home": (BuildContext context) => HomePage(),
@@ -31,8 +28,12 @@ void main() {
 
   runApp(MyMain());
 }
+class Translation extends WiredashTranslationData{
+
+}
 
 class MyMain extends StatefulWidget {
+
   @override
   State<StatefulWidget> createState() => MyMainState();
 }
@@ -43,6 +44,16 @@ class MyMainState extends State<MyMain> {
   FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
       new FlutterLocalNotificationsPlugin();
 
+  final _navigatorKey = GlobalKey<NavigatorState>();
+  final String projectId = "walls-d5jrdmo";
+  final String secretKey = "1jsxsfpdu0hp33hsebubnisgj9kxsixl";
+  int _counter = 0;
+
+  void _incrementCounter(){
+    setState(() {
+      _counter++;
+    });
+  }
   @override
   void initState() {
     super.initState();
@@ -140,17 +151,32 @@ class MyMainState extends State<MyMain> {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      theme: ThemeData(primaryColor: Colors.black, accentColor: Colors.cyan),
-      debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
-      routes: <String, WidgetBuilder>{
-        '/adminpage': (BuildContext context) => AdminPage(),
-        '/homepage': (BuildContext context) => SideBarLayout(),
-        '/blogpage': (BuildContext context) => BlogPage(),
-        '/aboutpage': (BuildContext context) => AboutPage(),
-        '/logout': (BuildContext context) => LoginPage(),
-      },
+    return Wiredash(
+      theme: WiredashThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.blueAccent,
+        secondaryColor: Colors.blueAccent,
+        dividerColor: Colors.white,
+      ),
+      secret: secretKey,
+      projectId: projectId,
+      navigatorKey: _navigatorKey,
+      options: WiredashOptionsData(
+        showDebugFloatingEntryPoint: false,
+      ),
+      child: new MaterialApp(
+        navigatorKey: _navigatorKey,
+        theme: ThemeData(primaryColor: Colors.black, accentColor: Colors.cyan),
+        debugShowCheckedModeBanner: false,
+        home: SplashScreen(),
+        routes: <String, WidgetBuilder>{
+
+          '/homepage': (BuildContext context) => SideBarLayout(),
+
+          '/aboutpage': (BuildContext context) => AboutPage(),
+
+        },
+      ),
     );
   }
 }

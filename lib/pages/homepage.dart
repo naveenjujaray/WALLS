@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:Walls/bloc/navigation_bloc/dashboard_navigation.dart';
 import 'package:Walls/commons/category_model.dart';
 import 'package:Walls/commons/data.dart';
 import 'package:Walls/commons/image_view.dart';
@@ -13,7 +12,8 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:http/http.dart' as http;
 import 'package:Walls/pages/search.dart';
 import 'package:Walls/pages/category.dart';
-class HomePage extends StatefulWidget with NavigationStates,DashboardStates {
+import 'package:wiredash/wiredash.dart';
+class HomePage extends StatefulWidget with NavigationStates{
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -52,6 +52,13 @@ class _HomePageState extends State<HomePage> {
     super.initState();
 
   }
+  int _counter = 0;
+  void _incrementCounter(){
+    setState(() {
+      _counter++;
+    });
+    Wiredash.of(context).show();
+  }
 
 
   @override
@@ -64,6 +71,12 @@ class _HomePageState extends State<HomePage> {
           ),
         elevation: 0.0,
         ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.black,
+        onPressed: _incrementCounter,
+        child: Icon(Icons.feedback,
+        color: Colors.white,),
+      ),
       body: SingleChildScrollView(
           child: Container(
             child: Column(
@@ -121,8 +134,10 @@ class _HomePageState extends State<HomePage> {
                         imgUrl: category[index].imgUrl,
                       );
                   }),
+
                 ),
                 WallpapersList(wallpapers: wallpapers,context: context)
+
               ],
             ),
           ),

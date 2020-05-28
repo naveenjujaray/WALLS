@@ -5,6 +5,7 @@ import 'package:Walls/commons/wallpaper_model.dart';
 import 'package:flutter/material.dart';
 import 'package:Walls/pages/widget.dart';
 import 'package:http/http.dart' as http;
+import 'package:wiredash/wiredash.dart';
 
 class Search extends StatefulWidget {
 
@@ -47,6 +48,13 @@ class _SearchState extends State<Search> {
     super.initState();
     searchController.text = widget.searchQuery;
   }
+  int _counter = 0;
+  void _incrementCounter(){
+    setState(() {
+      _counter++;
+    });
+    Wiredash.of(context).show();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,6 +64,12 @@ class _SearchState extends State<Search> {
         centerTitle: true,
         title: brandName(),
         elevation: 0.0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.black,
+        onPressed: _incrementCounter,
+        child: Icon(Icons.feedback,
+          color: Colors.white,),
       ),
       body: SingleChildScrollView(
         child: Container(
