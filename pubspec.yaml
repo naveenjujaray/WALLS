@@ -45,6 +45,7 @@ dependencies:
   bottomreveal: ^1.0.0
   charts_flutter: ^0.9.0
   animated_floatactionbuttons: ^0.1.0
+  path_provider: ^1.6.7
   share: ^0.6.4+2
   intl: ^0.16.1
   flare_flutter: ^2.0.3
@@ -52,7 +53,7 @@ dependencies:
   rxdart_codemod: ^0.1.5
   flutter_bloc : ^4.0.0
   cached_network_image: ^2.2.0+1
-  wallpaper:
+  wallpaper: ^0.0.8
   package_info: ^0.4.0+18
   flutter_staggered_grid_view: ^0.3.0
   crop: ^0.3.1+1
@@ -70,8 +71,8 @@ dependencies:
   quick_actions: ^0.4.0+5
   full_screen_image: ^1.0.2
   launch_review: ^2.0.0
-  in_app_purchase: ^0.3.3+2
-  wiredash:
+  in_app_purchase: ^0.3.4
+  wiredash: ^0.1.0
 
 
 

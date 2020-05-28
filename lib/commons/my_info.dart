@@ -32,7 +32,7 @@ class MyInfo extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("Mobile Application Developer",
+              Text("Flutter Developer",
               style: whiteSubHeadingTextStyle,
               ),
             ],
