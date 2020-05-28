@@ -1,10 +1,6 @@
 <templateSet group="Flutter">
-  <template name="container" value="Container(&#10;  child: $Widget$(),&#10;)," description="Create Container Widget" toReformat="true" toShortenFQNames="true">
-    <variable name="Widget" expression="&quot;Widget&quot;" defaultValue="" alwaysStopAt="true" />
-    <context />
-  </template>
-  <template name="column" value="Column(&#10;  children: &lt;Widget&gt;[$goto$],&#10;)," description="Create Column Widget" toReformat="true" toShortenFQNames="true">
-    <variable name="goto" expression="&quot;&quot;" defaultValue="" alwaysStopAt="true" />
+  <template name="build" value="@override &#10; Widget build(BuildContext context) { &#10; return $body$; &#10;}&#10;" description="No Such Method" toReformat="true" toShortenFQNames="true">
+    <variable name="body" expression="$body$" defaultValue="" alwaysStopAt="true" />
     <context />
   </template>
 </templateSet>
