@@ -1,0 +1,60 @@
+<application>
+  <component name="VimEditorSettings">
+    <editor />
+  </component>
+  <component name="VimKeySettings">
+    <shortcut-conflicts>
+      <shortcut-conflict owner="ide">
+        <text>ctrl pressed V</text>
+      </shortcut-conflict>
+    </shortcut-conflicts>
+  </component>
+  <component name="VimMarksSettings">
+    <globalmarks />
+    <filemarks>
+      <file name="D:/Apps/Projects/Firechat/lib/pages/loginpage.dart" timestamp="1591205382091">
+        <mark key="[" line="42" column="14" />
+        <mark key="]" line="42" column="15" />
+        <mark key="." line="42" column="15" />
+      </file>
+      <file name="D:/Apps/Projects/Firechat/pubspec.yaml" timestamp="1591205188703">
+        <mark key="[" line="44" column="0" />
+        <mark key="]" line="44" column="0" />
+        <mark key="." line="44" column="0" />
+      </file>
+    </filemarks>
+    <jumps />
+  </component>
+  <component name="VimRegisterSettings">
+    <registers>
+      <register name="1" type="4">
+        <text encoding="base64">ICAgQ29udGFpbmVyKAogICAgICAgICAgICAgICAgICAgIGRlY29yYXRpb246IEJveERlY29yYXRpb24oCgogICAgICAgICAgICAgICAgICAgICksCiAgICAgICAgICAgICAgICAgICAgY2hpbGQ6IFRleHRGaWVsZCgKICAgICAgICAgICAgICAgICAgICAgIGRlY29yYXRpb246IElucHV0RGVjb3JhdGlvbihoaW50VGV4dDogJ1Bhc3N3b3JkJywKICAgICAgICAgICAgICAgICAgICAgICAgaGludFN0eWxlOiBUZXh0U3R5bGUoY29sb3I6IENvbG9ycy53aGl0ZSksCiAgICAgICAgICAgICAgICAgICAgICAgIHByZWZpeEljb246IEljb24oSWNvbnMubG9jaywKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yOiBDb2xvcnMud2hpdGUpLAogICAgICAgICAgICAgICAgICAgICAgICBmaWxsQ29sb3I6IENvbG9ycy53aGl0ZS53aXRoT3BhY2l0eSgwLjIpLAogICAgICAgICAgICAgICAgICAgICAgICBmaWxsZWQ6IHRydWUsCiAgICAgICAgICAgICAgICAgICAgICAgIGJvcmRlcjogbmV3IE91dGxpbmVJbnB1dEJvcmRlcigKCiAgICAgICAgICAgICAgICAgICAgICAgICAgYm9yZGVyUmFkaXVzOiBjb25zdCBCb3JkZXJSYWRpdXMuYWxsKAoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IFJhZGl1cy5jaXJjdWxhcigyMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgKSwKICAgICAgICAgICAgICAgICAgICAgICAgICBib3JkZXJTaWRlOiBuZXcgQm9yZGVyU2lkZSgKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yOiBDb2xvcnMudHJhbnNwYXJlbnQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB3aWR0aDogMS4wLAogICAgICAgICAgICAgICAgICAgICAgICAgICksCiAgICAgICAgICAgICAgICAgICAgICAgICksCiAgICAgICAgICAgICAgICAgICAgICApLAogICAgICAgICAgICAgICAgICAgICAgb25DaGFuZ2VkOiAodmFsdWUpIHsKICAgICAgICAgICAgICAgICAgICAgICAgc2V0U3RhdGUoKCkgewoKICAgICAgICAgICAgICAgICAgICAgICAgICBfcGFzc3dvcmQgPSB2YWx1ZTsKICAgICAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAgb2JzY3VyZVRleHQ6IHRydWUsCiAgICAgICAgICAgICAgICAgICAgICBjdXJzb3JDb2xvcjogQ29sb3JzLndoaXRlLAogICAgICAgICAgICAgICAgICAgICAgc3R5bGU6IChUZXh0U3R5bGUoY29sb3I6IENvbG9ycy53aGl0ZSkpLAoKICAgICAgICAgICAgICAgICAgICApLAogICAgICAgICAgICAgICAgICApLA==</text>
+      </register>
+      <register name="&quot;" type="4">
+        <text encoding="base64">ICAgQ29udGFpbmVyKAogICAgICAgICAgICAgICAgICAgIGRlY29yYXRpb246IEJveERlY29yYXRpb24oCgogICAgICAgICAgICAgICAgICAgICksCiAgICAgICAgICAgICAgICAgICAgY2hpbGQ6IFRleHRGaWVsZCgKICAgICAgICAgICAgICAgICAgICAgIGRlY29yYXRpb246IElucHV0RGVjb3JhdGlvbihoaW50VGV4dDogJ1Bhc3N3b3JkJywKICAgICAgICAgICAgICAgICAgICAgICAgaGludFN0eWxlOiBUZXh0U3R5bGUoY29sb3I6IENvbG9ycy53aGl0ZSksCiAgICAgICAgICAgICAgICAgICAgICAgIHByZWZpeEljb246IEljb24oSWNvbnMubG9jaywKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yOiBDb2xvcnMud2hpdGUpLAogICAgICAgICAgICAgICAgICAgICAgICBmaWxsQ29sb3I6IENvbG9ycy53aGl0ZS53aXRoT3BhY2l0eSgwLjIpLAogICAgICAgICAgICAgICAgICAgICAgICBmaWxsZWQ6IHRydWUsCiAgICAgICAgICAgICAgICAgICAgICAgIGJvcmRlcjogbmV3IE91dGxpbmVJbnB1dEJvcmRlcigKCiAgICAgICAgICAgICAgICAgICAgICAgICAgYm9yZGVyUmFkaXVzOiBjb25zdCBCb3JkZXJSYWRpdXMuYWxsKAoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IFJhZGl1cy5jaXJjdWxhcigyMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgKSwKICAgICAgICAgICAgICAgICAgICAgICAgICBib3JkZXJTaWRlOiBuZXcgQm9yZGVyU2lkZSgKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yOiBDb2xvcnMudHJhbnNwYXJlbnQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB3aWR0aDogMS4wLAogICAgICAgICAgICAgICAgICAgICAgICAgICksCiAgICAgICAgICAgICAgICAgICAgICAgICksCiAgICAgICAgICAgICAgICAgICAgICApLAogICAgICAgICAgICAgICAgICAgICAgb25DaGFuZ2VkOiAodmFsdWUpIHsKICAgICAgICAgICAgICAgICAgICAgICAgc2V0U3RhdGUoKCkgewoKICAgICAgICAgICAgICAgICAgICAgICAgICBfcGFzc3dvcmQgPSB2YWx1ZTsKICAgICAgICAgICAgICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAgb2JzY3VyZVRleHQ6IHRydWUsCiAgICAgICAgICAgICAgICAgICAgICBjdXJzb3JDb2xvcjogQ29sb3JzLndoaXRlLAogICAgICAgICAgICAgICAgICAgICAgc3R5bGU6IChUZXh0U3R5bGUoY29sb3I6IENvbG9ycy53aGl0ZSkpLAoKICAgICAgICAgICAgICAgICAgICApLAogICAgICAgICAgICAgICAgICApLA==</text>
+      </register>
+      <register name="2" type="4">
+        <text encoding="base64">ICBjaGlsZDogVGV4dEZpZWxkKAoKICAgICAgICAgICAgICAgICAgICAgIGRlY29yYXRpb246IElucHV0RGVjb3JhdGlvbigKICAgICAgICAgICAgICAgICAgICAgICAgaGludFRleHQ6ICdFbWFpbCcsCiAgICAgICAgICAgICAgICAgICAgICAgIGhpbnRTdHlsZTogVGV4dFN0eWxlKGNvbG9yOiBDb2xvcnMud2hpdGUpLAogICAgICAgICAgICAgICAgICAgICAgICBwcmVmaXhJY29uOiBJY29uKEljb25zLm1haWwsCiAgICAgICAgICAgICAgICAgICAgICAgICAgY29sb3I6IENvbG9ycy53aGl0ZSwpLAogICAgICAgICAgICAgICAgICAgICAgICBmaWxsQ29sb3I6IENvbG9ycy53aGl0ZS53aXRoT3BhY2l0eSgwLjIpLAogICAgICAgICAgICAgICAgICAgICAgICBmaWxsZWQ6IHRydWUsCiAgICAgICAgICAgICAgICAgICAgICAgIGJvcmRlcjogbmV3IE91dGxpbmVJbnB1dEJvcmRlcigKCiAgICAgICAgICAgICAgICAgICAgICAgICAgYm9yZGVyUmFkaXVzOiBjb25zdCBCb3JkZXJSYWRpdXMuYWxsKAoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbnN0IFJhZGl1cy5jaXJjdWxhcigyMCksCiAgICAgICAgICAgICAgICAgICAgICAgICAgKSwKICAgICAgICAgICAgICAgICAgICAgICAgICBib3JkZXJTaWRlOiBuZXcgQm9yZGVyU2lkZSgKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG9yOiBDb2xvcnMudHJhbnNwYXJlbnQsCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB3aWR0aDogMS4wLAogICAgICAgICAgICAgICAgICAgICAgICAgICksCiAgICAgICAgICAgICAgICAgICAgICAgICksCiAgICAgICAgICAgICAgICAgICAgICApLAogICAgICAgICAgICAgICAgICAgICAgb25DaGFuZ2VkOiAodmFsdWUpIHsKICAgICAgICAgICAgICAgICAgICAgICAgc2V0U3RhdGUoKCkgewogICAgICAgICAgICAgICAgICAgICAgICAgIF9lbWFpbCA9IHZhbHVlOwogICAgICAgICAgICAgICAgICAgICAgICB9KTsKCiAgICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAgY3Vyc29yQ29sb3I6IENvbG9ycy53aGl0ZSwKICAgICAgICAgICAgICAgICAgICAgIHN0eWxlOiAoVGV4dFN0eWxlKGNvbG9yOiBDb2xvcnMud2hpdGUpKSwKICAgICAgICAgICAgICAgICAgICApLA==</text>
+      </register>
+      <register name="3" type="4">
+        <text encoding="base64">CiAgU3RyaW5nIF9lbWFpbDsKICBTdHJpbmcgX3Bhc3N3b3JkOw==</text>
+      </register>
+      <register name="-" type="4">
+        <text encoding="base64">ICBmb250X2F3ZXNvbWVfZmx1dHRlcjogXjguMi4w</text>
+      </register>
+    </registers>
+  </component>
+  <component name="VimSearchSettings">
+    <search>
+      <last-dir>0</last-dir>
+      <show-last>false</show-last>
+    </search>
+  </component>
+  <component name="VimSettings">
+    <state version="6" enabled="false" />
+    <notifications>
+      <idea-join enabled="false" />
+      <idea-put enabled="false" />
+    </notifications>
+  </component>
+</application>
