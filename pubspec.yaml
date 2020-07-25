@@ -73,6 +73,9 @@ dependencies:
   launch_review: ^2.0.0
   in_app_purchase: ^0.3.4
   wiredash: ^0.1.0
+  line_awesome_flutter: ^1.0.1
+  flutter_screenutil: ^1.0.2
+  animated_theme_switcher: ^1.0.5
 
 
 

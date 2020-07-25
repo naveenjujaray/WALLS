@@ -260,14 +260,14 @@ void onIconPressed() {
                       },
                     ),
 
-                    MenuItem(
-                      icon: Icons.person,
-                      title: "About Me",
-                      onTap: () {
-                        onIconPressed();
-                        BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.AboutPageClickedEvent);
-                      },
-                    ),//About Me
+                    //MenuItem(
+                      //icon: Icons.person,
+                 //     title: "About Me",
+                   //   onTap: () {
+                  //      onIconPressed();
+                    //    BlocProvider.of<NavigationBloc>(context).add(NavigationEvents.AboutPageClickedEvent);
+                  //    },
+                 //   ),//About Me
                     SizedBox(height: 20,),
                         RaisedButton(
                           splashColor: Colors.green,

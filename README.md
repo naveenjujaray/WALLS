@@ -1,4 +1,4 @@
-# walls
+# walls ![flutter](https://badgen.net/pub/flutter-platform/xml) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) ![Stars](https://img.shields.io/github/stars/naveenjujaray/walls?color=yellow) ![forks](https://img.shields.io/github/forks/naveenjujaray/walls?color=green)
 Your phone wallpaper is great way to express your unique personality.
 ________________________________________________________________________________________________________________________________________
 Walls is a wallpaper service app with out any Ads.

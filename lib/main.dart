@@ -42,7 +42,7 @@ class MyMainState extends State<MyMain> {
   final QuickActions _quickActions = QuickActions();
   FirebaseMessaging firebaseMessaging = new FirebaseMessaging();
   FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-      new FlutterLocalNotificationsPlugin();
+  new FlutterLocalNotificationsPlugin();
 
   final _navigatorKey = GlobalKey<NavigatorState>();
   final String projectId = "walls-d5jrdmo";
@@ -149,8 +149,10 @@ class MyMainState extends State<MyMain> {
     setState(() {});
   }
 
+
   @override
   Widget build(BuildContext context) {
+    
     return Wiredash(
       theme: WiredashThemeData(
         brightness: Brightness.dark,
