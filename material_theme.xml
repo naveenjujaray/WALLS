@@ -2,8 +2,11 @@
   <component name="MaterialThemeConfig">
     <option name="isHighContrast" value="true" />
     <option name="isWizardShown" value="true" />
-    <option name="accentColor" value="7e57c2" />
-    <option name="selectedTheme" value="NIGHT_OWL" />
+    <option name="pristineConfig" value="false" />
+    <option name="treeFontSize" value="18" />
+    <option name="settingsSelectedTab" value="1" />
+    <option name="accentColor" value="84ffff" />
+    <option name="selectedTheme" value="DEEPOCEAN" />
     <option name="userId" value="705e412f:17417661495:-8000" />
     <option name="version" value="4.11.5" />
   </component>
