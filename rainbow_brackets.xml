@@ -1,0 +1,7 @@
+<application>
+  <component name="RainbowSettings">
+    <option name="customNotifyShowed" value="true" />
+    <option name="numberOfColors" value="7" />
+    <option name="version" value="5.35" />
+  </component>
+</application>

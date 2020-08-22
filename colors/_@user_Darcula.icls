@@ -1,0 +1,29 @@
+<scheme name="_@user_Darcula" version="142" parent_scheme="Darcula">
+  <metaInfo>
+    <property name="created">2020-08-22T23:49:57</property>
+    <property name="ide">AndroidStudio</property>
+    <property name="ideVersion">4.0.1.0</property>
+    <property name="modified">2020-08-22T23:52:18</property>
+    <property name="originalScheme">Darcula</property>
+  </metaInfo>
+  <colors>
+    <option name="FILESTATUS_ADDED" value="9ccc65" />
+    <option name="FILESTATUS_DELETED" value="ef5350" />
+    <option name="FILESTATUS_HIJACKED" value="7e57c2" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_DELETED_FROM_FILE_SYSTEM" value="ef5350" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="395a75" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_BOTH_CONFLICTS" value="ffeb95" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_CONFLICTS" value="ffeb95" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_PROPERTY_CONFLICTS" value="ffeb95" />
+    <option name="FILESTATUS_MERGED" value="a2bffc" />
+    <option name="FILESTATUS_MODIFIED" value="e2b93d" />
+    <option name="FILESTATUS_NOT_CHANGED_IMMEDIATE" value="57b6c2" />
+    <option name="FILESTATUS_NOT_CHANGED_RECURSIVE" value="57b6c2" />
+    <option name="FILESTATUS_SUPPRESSED" value="d6deeb" />
+    <option name="FILESTATUS_SWITCHED" value="e2b93d" />
+    <option name="FILESTATUS_UNKNOWN" value="addb67" />
+    <option name="FILESTATUS_addedOutside" value="addb67" />
+    <option name="FILESTATUS_changelistConflict" value="ffeb95" />
+    <option name="FILESTATUS_modifiedOutside" value="e2b93d" />
+  </colors>
+</scheme>
