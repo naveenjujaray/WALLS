@@ -1,13 +1,14 @@
 <application>
   <component name="MaterialThemeConfig">
+    <option name="highContrast" value="true" />
     <option name="allowDataCollection" value="true" />
     <option name="isHighContrast" value="true" />
     <option name="isWizardShown" value="true" />
     <option name="pristineConfig" value="false" />
     <option name="treeFontSize" value="18" />
-    <option name="accentColor" value="42a5f5" />
-    <option name="selectedTheme" value="ARC_DARK" />
+    <option name="accentColor" value="84ffff" />
+    <option name="selectedTheme" value="DEEPOCEAN" />
     <option name="userId" value="705e412f:17417661495:-8000" />
-    <option name="version" value="4.11.5" />
+    <option name="version" value="5.2.0" />
   </component>
 </application>
